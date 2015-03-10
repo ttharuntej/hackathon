@@ -14,7 +14,7 @@ exports.index = function(req, res) {
 exports.handbag = function(req, res) {
 
     var searchResult = {
-        "count" :   10,
+        "count" :   7,
         "items" :   [
             {
                 itemId:   "131326518221",
@@ -39,21 +39,6 @@ exports.handbag = function(req, res) {
                 ]
             },
             {
-                "itemId":
-                    "251722263135"
-                ,
-                price:  "13.99",
-                "title": [
-                    "Women's Fashion Designer Handbag, MSRP $42.95 Faux Leather, Brand New with Tags!"
-                ],
-                "galleryURL": [
-                    "http://thumbs4.ebaystatic.com/m/mpcPaRpventXHPrwtaDrteA/140.jpg"
-                ],
-                PictureURL: [
-                    "http://i.ebayimg.com/00/s/NDgwWDY0MA==/z/ipgAAOxyuR5Tab2j/$_1.JPG?set_id=880000500F"
-                ]
-
-            },{
                 itemId:
                     "381058566451"
                 ,
@@ -67,23 +52,6 @@ exports.handbag = function(req, res) {
                 PictureURL: [
                     "http://i.ebayimg.com/00/s/NzQwWDg3Mg==/z/eIcAAOSwAF5UZkNh/$_1.JPG?set_id=880000500F",
                     "http://i.ebayimg.com/00/s/NzUyWDg4Nw==/z/MbEAAOSw0vBUZkNj/$_1.JPG?set_id=880000500F"
-                ]
-            },{
-                itemId:
-                    "131352388209"
-                ,
-                title: [
-                    "Michael Kors Small Black Leather Purse"
-                ],
-                galleryURL: [
-                    "http://thumbs2.ebaystatic.com/m/mhchXKfeK9_exke5UvnE7TA/140.jpg"
-                ],
-                PictureURL: [
-                    "http://i.ebayimg.com/00/s/MTA2NlgxNjAw/z/3KkAAOSwuMFUafQJ/$_1.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTA2NlgxNjAw/z/4OoAAOSw~FNUafQU/$_1.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTA2NlgxNjAw/z/c~IAAOSwcldUafQf/$_1.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTA2NlgxNjAw/z/DxEAAOSwAF5UafQp/$_1.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTA2NlgxNjAw/z/F5wAAOSw2XFUafQ0/$_1.JPG?set_id=880000500F"
                 ]
             },{
                 itemId:
@@ -168,28 +136,6 @@ exports.handbag = function(req, res) {
                     "http://i.ebayimg.com/00/s/MzIwWDgwMA==/z/O9MAAOSwD0lUbMLC/$_1.JPG?set_id=880000500F",
                     "http://i.ebayimg.com/00/s/NDMzWDgwMA==/z/JwUAAOSwaNBUbMK~/$_1.JPG?set_id=880000500F",
                     "http://i.ebayimg.com/00/s/NjAxWDgwMA==/z/nhkAAOSwg3FUbMLF/$_1.JPG?set_id=880000500F"
-                ]
-            },{
-                itemId:
-                    "181590147625"
-                ,
-                title: [
-                    "Gorgeous Chanel Purse "
-                ],
-                price:  "13.99",
-                galleryURL: [
-                    "http://thumbs2.ebaystatic.com/m/mKiS8YX5w9zWaI6Q2F-Qcwg/140.jpg"
-                ],
-                PictureURL: [
-                    "http://i.ebayimg.com/00/s/MTAwMFg3NTA=/z/guUAAOSwuMFUbMC~/$_12.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTAwMFg3NTA=/z/r5MAAOSwofxUbMDE/$_12.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTAwMFg3NTA=/z/csIAAOSwiCRUbMDI/$_12.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/NzUwWDEwMDA=/z/c14AAOSwiCRUbMDN/$_12.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTAwMFg3NTA=/z/MtMAAOSwj0NUbMDQ/$_12.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTAwMFg3NTA=/z/s0UAAOSw2XFUbMDq/$_12.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTAwMFg3NTA=/z/tXAAAOSwofxUbMDv/$_12.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTAwMFg3NTA=/z/p34AAOSwAL9UbMD2/$_12.JPG?set_id=880000500F",
-                    "http://i.ebayimg.com/00/s/MTIwMFgxNjAw/z/3MMAAOSwaNBUce2H/$_1.JPG?set_id=880000500F"
                 ]
             },{
                 itemId:
