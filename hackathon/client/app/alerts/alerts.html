@@ -1,0 +1,123 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+<div class="container" ng-controller="AlertsCtrl">
+	<script type="text/ng-template" id="myModalContent.html">
+	    <div class="modal-header">
+	        <h3 class="modal-title">Define New Alert</h3>
+	    </div>
+	    <div class="modal-body">
+	    	<form role="form" class="form-horizontal" name="newanalysisform" novalidate>
+	    		<div class="form-group">
+	    			<label for="module" class="col-sm-2 control-label">Module</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="module" placeholder="Module Name" ng-model="alert.module" typeahead='module.module for module in availablemodules | filter:$viewValue'>
+				    </div>
+				 </div>
+				 <div class="form-group">
+	    			<label for="usecase" class="col-sm-2 control-label">Usecase</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="usecase" placeholder="Usecase" ng-model="alert.usecase" typeahead='usecase.usecase for usecase in availableusecases | filter:$viewValue'>
+				    </div>
+				 </div>
+				 <div class="form-group">
+	    			<label for="dimension1" class="col-sm-2 control-label">Dimension1</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="dimension1" placeholder="Dimension1" ng-model="alert.dimension1" typeahead='dimension1.dimension1 for dimension1 in availabledimension1 | filter:$viewValue'>
+				    </div>
+				 </div>
+				 <div class="form-group">
+	    			<label for="dimension2" class="col-sm-2 control-label">Dimension2</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="dimension2" placeholder="Dimension2" ng-model="alert.dimension2" typeahead='dimension2.dimension2 for dimension2 in availabledimension2 | filter:$viewValue'>
+				    </div>
+				 </div>
+				 <div class="form-group">
+	    			<label for="dimension3" class="col-sm-2 control-label">Dimension3</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="dimension3" placeholder="Dimension3" ng-model="alert.dimension3" typeahead='dimension3.dimension3 for dimension3 in availabledimension3 | filter:$viewValue'>
+				    </div>
+				 </div>
+				 <div class="form-group">
+	    			<label for="aggregateType" class="col-sm-2 control-label">Aggregate Type</label>
+				    <div class="col-sm-10">
+				    	<select class="form-control" ng-model="alert.aggregateType" id="aggregateType">
+				    		<option>sum</option>
+				    		<option>avg</option>
+				    	</select>
+				    </div>
+				 </div>
+				  <div class="form-group">
+	    			<label for="operator" class="col-sm-2 control-label">Operator</label>
+				    <div class="col-sm-10">
+				    	<select class="form-control" ng-model="alert.operator" id="operator">
+				    		<option>gt</option>
+				    		<option>lt</option>
+				    	</select>
+				    </div>
+				 </div>
+				 <div class="form-group">
+	    			<label for="treshold" class="col-sm-2 control-label">Treshold</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="treshold" placeholder="treshold" ng-model="alert.treshold" >
+				    </div>
+				 </div>
+				 <div class="form-group">
+	    			<label for="duration" class="col-sm-2 control-label">Duration</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="duration" placeholder="duration" ng-model="alert.duration" >
+				    </div>
+				 </div>
+				 <div class="form-group">
+	    			<label for="email" class="col-sm-2 control-label">Email</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="email" placeholder="email" ng-model="alert.email" >
+				    </div>
+				 </div>
+	    	</form>
+	    </div>
+	    <div class="modal-footer">
+	        <button class="btn btn-primary" ng-click="save()">Save</button>
+	        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	    </div>
+	</script>
+
+  <div class="row">
+    <div class="col-lg-12">
+    	<button class="btn btn-primary pull-right" ng-click="openNewAlertModal()">New Alert</button>
+    	<table class="table table-condensed table-hover">
+    		<tr>
+    			<th>Module</th>
+    			<th>Usecase</th>
+    			<th>Dimension1</th>
+    			<th>Dimension2</th>
+    			<th>Dimension3</th>
+    			<th>Aggregate Type</th>
+    			<th>Operator</th>
+    			<th>Treshold</th>
+    			<th>Duration</th>
+    			<th>Email</th>
+    			<th>Description</th>
+    			<th colspan="2">Actions</th>
+    		</tr>
+    		<tr ng-repeat="alertdef in alertdefs">
+    		<td>{{alertdef.module}}</td>
+    		<td>{{alertdef.usecase}}</td>
+    		<td>{{alertdef.dimension1}}</td>
+    		<td>{{alertdef.dimension2}}</td>
+    		<td>{{alertdef.dimension3}}</td>
+    		<td>{{alertdef.aggregateType}}</td>
+    		<td>{{alertdef.operator}}</td>
+    		<td>{{alertdef.treshold}}</td>
+    		<td>{{alertdef.duration}}</td>
+    		<td>{{alertdef.email}}</td>
+    		<td>For {{alertdef.module}} {{alertdef.usecase}} {{alertdef.dimension1}} if {{alertdef.aggregateType}} of value is greater than {{alertdef.treshold}} in {{alertdef.duration}} then send email to {{alertdef.email}}</td>
+    		<td>
+    			<button class="btn btn-primary" ng-click="editAlert(alertdef)">Edit</button>
+    		</td>
+    		<td>
+    			<button class="btn btn-danger" ng-click="deleteAlert(alertdef._id)">Delete</button>
+    		</td>
+    		</tr>
+    	</table>
+    </div>
+  </div>
+</div>
